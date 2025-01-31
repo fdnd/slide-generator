@@ -20,7 +20,7 @@ module.exports = {
       {
         name: 'sprintNumber',
         message: 'Sprint number (will be used for naming the project)',
-        default: 1,
+        default: '12',
         filter: val => val.toLowerCase(),
         validate: function (value) {
           const invalid = value.match(
@@ -35,12 +35,13 @@ module.exports = {
       {
         name: 'presentationNiceName',
         message: 'Presentation nice name (pretty name used for presentation meta title and slide headers etc.)',
-        default: this.outFolder,
+
+        default: this.outFolder.replace('-', ' ').replace(/\b\w/g, char => char.toUpperCase()),
       },
       {
         name: 'presentationNameWithoutSpaces',
         message: 'Presentation name without spaces (used for package name, local and git)',
-        default: this.presentationNiceName.replace(/[^a-zA-Z0-9]/g, ''),
+        default: this.outFolder,
       },
       {
         name: 'description',
@@ -95,10 +96,6 @@ module.exports = {
     console.log(`		${chalk.hex('#ff69b4')(`cd ${this._answers.presentationNameWithoutSpaces}`)}`)
     console.log('	- Start dev')
     console.log(`		${chalk.hex('#ff69b4')('npm run dev')}`)
-    console.log('	- Install wordpress')
-    console.log('	- Activate your theme')
-    console.log('	- If you have wp cli installed you can use:')
-    console.log(`		${chalk.hex('#ff69b4')(`wp theme activate ${this._answers.packageName}`)}`)
     console.log('	- Start developing!')
     console.log()
   }
