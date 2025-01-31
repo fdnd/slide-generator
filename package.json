@@ -1,0 +1,32 @@
+{
+	"name": "fdnd-presentation-generator",
+	"version": "0.0.1",
+	"description": "Create a presentation for FDND.",
+	"engines": {
+		"node": "^18"
+	},
+	"bin": "cli.js",
+	"files": [
+		"cli.js",
+		"saofile.js",
+		"template/"
+	],
+	"repository": {
+		"url": "git+https://github.com/matiseams/automatise-wordpress.git",
+		"type": "git"
+	},
+	"scripts": {
+		"test": "rm -rf test && node cli.js test '{\"sprintNumber\":\"0\",\"presentationNiceName\":\"test\",\"presentationNameWithoutSpaces\":\"test\",\"description\":\"test\",\"author\":\"test\"}'",
+		"trypublish": "npm publish || true"
+	},
+	"dependencies": {
+		"axios": "^0.19.0",
+		"sao": "1.7.1",
+		"superb": "^4.0.0"
+	},
+	"authors": [
+		"FDND <info-fdnd@hva.nl>",
+		"Cyd Stumpel <info@cydstumpel.nl>"
+	],
+	"license": "MIT"
+}
