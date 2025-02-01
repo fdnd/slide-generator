@@ -16,7 +16,8 @@
 		"type": "git"
 	},
 	"scripts": {
-		"test": "rm -rf test && node cli.js test '{\"sprintNumber\":\"0\",\"presentationNiceName\":\"test\",\"presentationNameWithoutSpaces\":\"test\",\"description\":\"test\",\"author\":\"test\"}'",
+		"test": "rm -rf test && node cli.js test '{\"sprintNumber\":\"12\",\"presentationNiceName\":\"Visuele Hierarchie\",\"presentationNameWithoutSpaces\":\"visuele-hierarchie\",\"description\":\"test\",\"author\":\"test\"}'",
+		"rerun": "npm run test && cd test && npm run dev",
 		"trypublish": "npm publish || true"
 	},
 	"dependencies": {

@@ -1,8 +1,9 @@
 <script>
+  import { SprintIndicator } from '$lib/deck/partials';
   export let data = {
     title: {
       content: '',
-      level: 1, // to do make this dynamic somehow?
+      level: 1,
       classes: 'large-heading'
     },
     text: {
@@ -10,12 +11,17 @@
       classes: 'large-body font-medium'
     }
   };
+  $: headingTag = `h${Math.min(Math.max(data.title.level, 1), 6)}`;
   export let transition;
 </script>
 
 <section class="text-slide" data-transition={transition}>
-  <h1 class={data.title.classes}>{@html data.title.content}</h1>
-  <div class="text {data.text.classes}">{@html data.text.content}</div>
+  <SprintIndicator />
+  <svelte:element 
+    this={headingTag} 
+    class={data.title.classes}
+  >{@html data.title.content}</svelte:element>
+  <div class="p {data.text.classes}">{@html data.text.content}</div>
 </section>
 
 <style lang="scss">

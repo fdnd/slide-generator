@@ -71,6 +71,9 @@ module.exports = {
       patterns: {
         'routes': 'src/routes',
         'deck': 'src/lib/deck',
+        'global.css': 'static/global.css',
+        'favicon.png': 'static/favicon.png',
+        'app.html': 'src/app.html',
       }
     },
     {
@@ -93,7 +96,7 @@ module.exports = {
     console.log()
     console.log(chalk.bold('  To get started:\n'))
     console.log('	- Go to project dir (if not already present)')
-    console.log(`		${chalk.hex('#ff69b4')(`cd ${this._answers.presentationNameWithoutSpaces}`)}`)
+    console.log(`		${chalk.hex('#ff69b4')(`cd ${this.outFolder}`)}`)
     console.log('	- Start dev')
     console.log(`		${chalk.hex('#ff69b4')('npm run dev')}`)
     console.log('	- Start developing!')
