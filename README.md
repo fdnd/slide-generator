@@ -3,7 +3,7 @@
 ## Usage
 // to do: create NPM package
 ```bash
-npx @fdnd/presentation-generator@latest <my-project> 
+npx @fdnd/create-slides@latest <my-project> 
 ```
 
 ## Updating this package:
