@@ -52,6 +52,7 @@
     flex-direction: column;
     gap: 1em;
     padding: var(--padding);
+    text-align: left;
   }
   .code-string { /* Heading logic*/
     font-size: 100%;

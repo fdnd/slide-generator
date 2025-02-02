@@ -3,6 +3,7 @@ const chalk = require('chalk')
 const { execSync } = require('child_process')
 
 const packages = [
+  '@sveltejs/adapter-static',
   'reveal.js',
   '@fontsource/jetbrains-mono',
   'gsap'

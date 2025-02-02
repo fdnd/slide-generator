@@ -5,62 +5,19 @@
 	import Notes from "reveal.js/plugin/notes/notes";
 
 	import { onMount } from "svelte";
-	import { baseData } from "$lib/deck/base-data";
-	
 
 	import "reveal.js/dist/reveal.css";
 
-	import { TextSlide, Cover } from "./slides/index.js";
+	import {
+		TextSlide,
+		Cover,
+		PhotoCollage,
+		Planning,
+		TextColumns,
+		Quote,
+	} from "./slides/index.js";
 
-	const slideContent = [
-		{
-			slideType: Cover,
-			transition: "slide", // zoom, fade, slide, convex, concave, zoom-in, zoom-out, none
-			data: {
-				classes: "xlarge-heading", // choose large-, or medium-heading if presentation name is too long'
-				sprintNr: {
-					content: `Sprint ${baseData.sprintNumber}`,
-				},
-				presentationName: {
-					content: baseData.presentationName,
-				},
-				type: {
-					content: "workshop",
-				},
-				emojis: {
-					content: ["🚀", "💪", "="], // max 3 emojis
-				}
-			}
-		},
-		{
-			slideType: TextSlide,
-			transition: "slide", // zoom, fade, slide, convex, concave, zoom-in, zoom-out, none
-			data: {
-				title: {
-					content: "Sprint 11 - Visuele Hierarchie",
-					level: 1,
-					classes: "large-heading",
-				},
-				text: {
-					content: "Slide nummer 1.",
-					classes: "large-body font-medium",
-				},
-			},
-		},
-		{
-			slideType: TextSlide,
-			transition: "zoom", // zoom, fade, slide, convex, concave, zoom-in, zoom-out, none
-			data: {
-				title: {
-					content: "Sprint 12 - Visuele Hierarchie",
-					level: 1,
-				},
-				text: {
-					content: "Slide nummer 2.",
-				},
-			},
-		},
-	];
+	import { slideContent } from "./slide-content.js";
 
 	onMount(() => {
 		const deck = new Reveal({
