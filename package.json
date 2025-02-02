@@ -1,5 +1,5 @@
 {
-	"name": "fdnd-presentation-generator",
+	"name": "@fdnd/create-slides",
 	"version": "0.0.1",
 	"description": "Create a presentation for FDND.",
 	"engines": {
