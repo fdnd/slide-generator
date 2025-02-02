@@ -75,11 +75,8 @@ module.exports = {
         'global.css': 'static/global.css',
         'favicon.png': 'static/favicon.png',
         'app.html': 'src/app.html',
-      }
-    },
-    {
-      type: 'move',
-      patterns: {
+        'README.md': 'README.md',
+        'svelte.config.js': 'svelte.config.js',
         'gitignore': '.gitignore',
       }
     }

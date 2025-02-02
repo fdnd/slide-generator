@@ -3,7 +3,7 @@
   export let transition;
   export let data = {
     customPill: {
-      text: "Custom Pill",
+      text: "{Custom Pill}",
       color: "var(--c-text)",
       background: "var(--c-highlight)",
       position: "top left",
@@ -11,19 +11,18 @@
     columns: [
       {
         pointer: {
-          text: "Pointer",  
+          text: "{Pointer}",  
           color: "var(--c-text)",
           background: "var(--c-highlight)",
           position: "top right",
         },
         title: {
-          content: "Title",
+          content: "{Title}",
           level: 2,
           classes: "medium-heading",
         },
         text: {
-          content:
-            "Content",
+          content: "{Content}",
           classes: "small-heading",
         },
       },
