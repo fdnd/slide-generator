@@ -1,6 +1,6 @@
 {
 	"name": "@fdnd/create-slides",
-	"version": "0.0.5",
+	"version": "0.0.6",
 	"description": "Create a presentation for FDND.",
 	"engines": {
 		"node": "^18"
