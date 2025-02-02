@@ -1,4 +1,4 @@
 export const baseData = {
-	sprintNumber: "12",
-	presentationName: "Visuele Hierarchie",
+	sprintNumber: "<%= sprintNumber %>",
+	presentationName: "<%= presentationNiceName %>",
 }
