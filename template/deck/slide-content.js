@@ -1,7 +1,6 @@
 import { baseData } from "$lib/deck/base-data";
 
 import {
-  TextSlide,
   Cover,
   PhotoCollage,
   Planning,
