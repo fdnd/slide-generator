@@ -9,7 +9,6 @@
 	import "reveal.js/dist/reveal.css";
 
 	import {
-		TextSlide,
 		Cover,
 		PhotoCollage,
 		Planning,
